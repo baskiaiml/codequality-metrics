@@ -10,6 +10,9 @@ import java.util.concurrent.ConcurrentHashMap;
 @Service
 public class StockService {
 
+    // Deliberate: unused constant for SpotBugs UUF_UNUSED_FIELD (quality metrics demo)
+    private static final int DEFAULT_RESERVE_LIMIT = 1000;
+
     private final Map<String, Integer> quantityBySku = new ConcurrentHashMap<>();
     private final Map<String, Integer> reservedBySku = new ConcurrentHashMap<>();
 
